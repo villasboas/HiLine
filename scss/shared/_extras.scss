@@ -1,0 +1,77 @@
+.nopadding {
+    padding: 0px !important;
+}
+
+//Classes relacionadas ao float
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.clearfix {
+    clear: both;
+}
+
+//sistema de grid :vertic
+.row-10 {
+    height: 10vh;
+}
+.row-20 {
+    height: 20vh;
+}
+.row-30 {
+    height: 30vh;
+}
+.row-40 {
+    height: 40vh;
+}
+.row-50 {
+    height: 50vh;
+}
+.row-60 {
+    height: 60vh;
+}
+.row-70 {
+    height: 70vh;
+}
+.row-80 {
+    height: 80vh;
+}
+.row-90 {
+    height: 90vh;
+}
+.row-100 {
+    height: 100vh;
+}
+
+//alinhamento de textos
+.to-center {
+    text-align: center;
+}
+
+//text
+.get-white {
+    color: #fff;
+}
+
+//links
+.text-white {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+//placeholder
+.ph-white::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+.ph-white::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+.ph-white:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+.ph-white:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}

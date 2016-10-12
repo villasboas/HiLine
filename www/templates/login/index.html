@@ -1,0 +1,36 @@
+<ion-view view-title="Login" class="bg-primary">
+  <ion-content class="padding" class="bg-primary">
+    
+    <div class="row-20"></div>
+
+    <div class="row-40 row">
+        <div class="col-md-4 col-xs-12 col-xs-offset-1 col-md-offset-4">
+
+            <h2>Login</h2>
+
+            <div class="list list-inset">
+                
+                <label class="item item-input">
+                    <i class="icon ion-person placeholder-icon"></i>
+                    <input type="text" placeholder="Login" ng-model="login.email">
+                </label>
+ 
+                <label class="item item-input">
+                    <i class="icon ion-locked placeholder-icon"></i>
+                    <input type="password" placeholder="Senha" ng-model="login.senha">
+                </label>
+
+            </div><!-- inputs de login -->
+
+            <button class="button button-block button-balanced" ng-click="logar()">
+                Entrar
+            </button>
+        </div>
+    </div>
+
+  </ion-content>
+
+  <div class="bar bar-footer bar-stable">
+    <div class="title">HiLine &reg 2016</div>
+    </div>
+</ion-view>
