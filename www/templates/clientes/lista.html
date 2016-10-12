@@ -1,0 +1,38 @@
+<div class="bar bar-header bar-stable" style="padding-top: 8px">
+  <div class="button-bar" style="max-width: 200px">
+    <button class="button button-clear button-stable" ng-click="go('Master.clientesadicionar')">
+      <i class="ion-plus-circled"></i> &nbsp;Adicionar
+    </button>
+    <button class="button button-clear button-stable" ng-click="showPopup()">
+      <i class="ion-funnel"></i> &nbsp;Filtrar
+    </button>
+  </div>
+</div>
+
+<ion-content class="wrapper container" style="margin-top: 50px">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>Excluir</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in lista" ng-click="go('Master.clientesadicionar')">
+                <td data-label="Cliente">Automec</td>
+                <td data-label="CPF">444.444.444-44</td>
+                <td data-label="Telefone">(15) 3031-3421</td>
+                <td data-label="E-mail">email@email.com</td>
+                <td data-label="Excluir">
+                    <span style="color: red">
+                        <i class="ion-trash-a"></i>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</ion-content>

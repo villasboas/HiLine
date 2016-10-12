@@ -1,1 +1,42 @@
-<h1>{{ teste }}</h1>
+<div class="bar bar-header bar-dark">
+
+    <button class="button button-icon icon ion-navicon visible-xs" ng-click="toggleLeft()"></button><!-- botao menu -->
+    
+    <div class="h1 title">{{ title }}</div><!-- titulo da pagina -->
+   
+    <button class="button button-icon icon ion-gear-a" ng-click="showSheet()"></button><!-- botao de conta -->
+
+</div><!-- header principal -->
+
+<ion-side-menus>
+
+  <!-- menu da esquerda -->
+    <ion-side-menu side="left" expose-aside-when="large" style="margin-top: 40px">
+        <div class="list">
+            <div class="item item-divider">Administração</div>
+            <a class="item" >Rotinas</a>
+            <a class="item" >Cargos</a>
+            <a class="item" >Funcionários</a>
+
+            <div class="item item-divider">Clientes</div>
+            <a class="item" >Clientes</a>
+            <a class="item" >Vendas</a>
+
+            <div class="item item-divider">Contas</div>
+            <a class="item" >Cheques</a>
+            <a class="item" >Cartões</a>
+
+        </div>
+    </ion-side-menu>
+
+  <ion-side-menu-content>
+
+       <!-- nav view -->
+      <ion-nav-view  name="tab-clientes" class="main-view"  ng-if="false"></ion-nav-view>
+
+  </ion-side-menu-content>
+
+</ion-side-menus>
+
+
+

@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 
 var Controller = angular.module('Controller',['ionic']);
-var Services   = angular.module('Services',['ionic']);
+var Service    = angular.module('Services',['ionic']);
 
 
 angular.module('starter', ['ionic', 'Controller', 'Services'])
@@ -28,7 +28,9 @@ angular.module('starter', ['ionic', 'Controller', 'Services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider ) {
+
+  $ionicConfigProvider.views.maxCache(0);
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -44,11 +46,37 @@ angular.module('starter', ['ionic', 'Controller', 'Services'])
   })
 
   //view principal
+  // setup an abstract state for the tabs directive
   .state('Master', {
-    url        : '/master',
-    controller : "Master", 
+    url: '/master',
+    abstract: true,
+    controller: "Login",
     templateUrl: 'templates/master.html'
-  });
+  })
+
+  // Each tab has its own nav history stack:
+
+  .state('Master.clientes', {
+    url: '/clientes',
+    tab : 'tab-clientes',
+    views: {
+      'tab-clientes': {
+        templateUrl: 'templates/clientes/lista.html',
+        controller: 'Master'
+      }
+    }
+  })
+
+  .state('Master.clientesadicionar', {
+    url: '/clientes/adicionar',
+    tab : 'tab-clientes-adicionar',
+    views: {
+      'tab-clientes': {
+        templateUrl: 'templates/clientes/form.html',
+        controller: 'Master'
+      }
+    }
+  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
